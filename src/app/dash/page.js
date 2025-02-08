@@ -1,6 +1,6 @@
 "use client";
-import DashFooter from "@/Components/Dashboard/DashFooter";
-import DashHeader from "@/Components/Dashboard/DashHeader";
+import DashFooter from "@/Components/Dashboard/Footer";
+import DashHeader from "@/Components/Dashboard/Header";
 import React from "react";
 
 const page = () => {

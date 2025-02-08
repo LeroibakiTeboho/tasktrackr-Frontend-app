@@ -9,10 +9,16 @@ const DashHeader = () => {
   let title, link;
   if (pathname === "/auth/login") {
     title = "taskTrackr App";
-    link = '/auth/login';
+    link = "/auth/login";
   } else if (pathname === "/dash") {
     title = "Dashboard";
-    link = '/dash';
+    link = "/dash";
+  } else if (pathname === "/dash/notes") {
+    title = "TaskTrackr Notes";
+    link = "/dash/notes";
+  } else if (pathname === "/dash/users") {
+    title = "TaskTrackr Users";
+    link = "/dash/users";
   } else {
     title = "Change title of the page";
   }
@@ -25,17 +31,17 @@ const DashHeader = () => {
         </Link>
       </div>
       {/* Hide the navigation if on login page */}
-      {pathname !== '/auth/login' && (
+      {pathname !== "/auth/login" && (
         <nav>
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link href='/dash/notes'>View Notes</Link>
+              <Link href="/dash/notes">View Notes</Link>
             </li>
             <li>
-              <Link href='/dash/users'>User Settings</Link>
+              <Link href="/dash/users">User Settings</Link>
             </li>
             <li>
-              <Link href='/auth/login'>Logout</Link>
+              <Link href="/auth/login">Logout</Link>
             </li>
           </ul>
         </nav>
