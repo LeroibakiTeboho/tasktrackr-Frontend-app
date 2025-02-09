@@ -1,10 +1,58 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
+import { useGetUsersQuery } from "./usersApiSlice";
+import User from "./User";
 
 const UserList = () => {
-  return (
-    <div>UserList</div>
-  )
-}
+  const {
+    data: users,
+    isLoading,
+    isSuccess,
+    isError,
+    error,
+  } = useGetUsersQuery();
 
-export default UserList
+  let content;
+
+  if (isLoading) content = <div>Loading...</div>;
+
+  if (isError) {
+    content = (
+      <p className="inline-block bg-white text-firebrick p-[0.25em] mt-[0.5em]">
+        {error?.data?.message}
+      </p>
+    );
+  }
+
+  if (isSuccess) {
+    const { ids } = users;
+
+    const tableContent = ids?.length
+      ? ids.map((userId) => <User key={userId} userId={userId} />)
+      : null;
+
+    content = (
+      <table className="table table--users">
+        <thead>
+          <tr>
+            <th scope="col" className="table__th user__username">
+              Username
+            </th>
+            <th scope="col" className="table__th user__roles">
+              Roles
+            </th>
+            <th scope="col" className="table__th user__edit">
+              Edit
+            </th>
+          </tr>
+        </thead>
+        <tbody>{tableContent}</tbody>
+      </table>
+    );
+  }
+
+  return <div className="overflow-x-auto">{content}</div>;
+};
+
+export default UserList;
+

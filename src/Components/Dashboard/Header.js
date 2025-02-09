@@ -34,14 +34,24 @@ const DashHeader = () => {
       {pathname !== "/auth/login" && (
         <nav>
           <ul className="menu menu-horizontal px-1">
+          <li>
+              <Link href="/dash">Dashboard</Link>
+            </li>
             <li>
               <Link href="/dash/notes">View Notes</Link>
             </li>
             <li>
-              <Link href="/dash/users">User Settings</Link>
-            </li>
-            <li>
-              <Link href="/auth/login">Logout</Link>
+              <details>
+                <summary>Settings</summary>
+                <ul className="bg-base-100 rounded-t-none p-2">
+                  <li>
+                    <Link href="/dash/users">Users</Link>
+                  </li>
+                  <li>
+                    <Link href="/auth/login">Logout</Link>
+                  </li>
+                </ul>
+              </details>
             </li>
           </ul>
         </nav>

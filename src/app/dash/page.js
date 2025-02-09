@@ -7,7 +7,9 @@ const page = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white text-black">
       <DashHeader />
-      <main className="flex-grow flex flex-col justify-center overflow-auto px-4"></main>
+      <main className="flex-grow flex flex-col justify-center overflow-auto px-4">
+        Welcome to TaskTracker Site
+      </main>
       <DashFooter />
     </div>
   );
