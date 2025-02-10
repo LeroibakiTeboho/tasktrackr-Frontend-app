@@ -19,9 +19,9 @@ const DashFooter = () => {
   }, []);
 
   let _status = "", _user = "";
-  if (pathname === "/dash") {
-    _status = "Status:";
-    _user = "Current User:";
+  if (pathname === "/dash" || pathname === "/dash/notes" || pathname === "/dash/users") {
+    _status = "Status: ";
+    _user = "Current User: ";
   }
 
   return (
