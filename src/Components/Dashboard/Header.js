@@ -6,27 +6,27 @@ import React from "react";
 const DashHeader = () => {
   const pathname = usePathname();
 
-  let title, link;
-  if (pathname === "/auth/login") {
-    title = "taskTrackr App";
-    link = "/auth/login";
-  } else if (pathname === "/dash") {
-    title = "Dashboard";
-    link = "/dash";
-  } else if (pathname === "/dash/notes") {
-    title = "TaskTrackr Notes";
-    link = "/dash/notes";
-  } else if (pathname === "/dash/users") {
-    title = "TaskTrackr Users";
-    link = "/dash/users";
-  } else {
-    title = "Change title of the page";
-  }
+  // let title, link;
+  // if (pathname === "/auth/login") {
+  //   title = "taskTrackr App";
+  //   link = "/auth/login";
+  // } else if (pathname === "/dash") {
+  //   title = "Dashboard";
+  //   link = "/dash";
+  // } else if (pathname === "/dash/notes") {
+  //   title = "TaskTrackr Notes";
+  //   link = "/dash/notes";
+  // } else if (pathname === "/dash/users") {
+  //   title = "TaskTrackr Users";
+  //   link = "/dash/users";
+  // } else {
+  //   title = "Change title of the page";
+  // }
 
   return (
     <header className="navbar flex flex-row justify-between items-center text-white bg-black h-24 px-4">
       <div>
-        <Link href={link}>
+        <Link href={'/dash'}>
           <h1 className="text-3xl font-extrabold text-indigo-600">TaskTrackr</h1>
           {/* <h1 className="text-3xl font-extrabold text-indigo-600">{title}</h1> */}
         </Link>
