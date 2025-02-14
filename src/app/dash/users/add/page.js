@@ -14,7 +14,7 @@ const page = () => {
       </main>
       <DashFooter /> */}
       <DashHeader />
-      <main className="flex-grow flex flex-col justify-center overflow-auto px-4">
+      <main className="flex-grow flex flex-col justify-center items-center overflow-auto px-4">
         <NewUserForm />
       </main>
       <DashFooter />

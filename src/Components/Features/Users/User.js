@@ -11,7 +11,7 @@ const User = ({ userId }) => {
   const router = useRouter();
 
   if (user) {
-    const handleEdit = () => router.push(`/dash/users/${userId}`);
+    const handleEdit = () => router.push(`/dash/users/edit/${userId}`);
     const userRolesString = user.roles.toString().replaceAll(",", ", ");
     const cellStatus = user.active ? "" : "bg-gray-100";
 
@@ -37,3 +37,4 @@ const User = ({ userId }) => {
 };
 
 export default User;
+

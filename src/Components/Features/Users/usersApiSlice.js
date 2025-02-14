@@ -14,7 +14,6 @@ export const usersApiSlice = apiSlice.injectEndpoints({
       validateStatus: (response, result) => {
         return response.status === 200 && !result.isError; // Validate the status and result
       },
-      keepUnusedDataFor: 5, // Keep data for 5 seconds after it's no longer in use
       transformResponse: (responseData) => {
         // Process the response data
         const loaderUsers = responseData.map((user) => {
@@ -69,6 +68,8 @@ export const usersApiSlice = apiSlice.injectEndpoints({
       invalidatesTags: (result, error, arg) => [{ type: "User", id: arg.id }],
     }),
   }),
+
+  overrideExisting: true, 
 });
 
 export const {

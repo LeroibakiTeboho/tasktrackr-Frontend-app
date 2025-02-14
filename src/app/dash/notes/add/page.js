@@ -1,3 +1,4 @@
+'use client'
 import NewNote from '@/Components/Features/Notes/NewNote'
 import React from 'react'
 

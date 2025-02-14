@@ -69,9 +69,9 @@ const NewUserForm = () => {
           value={role}
           checked={roles.includes(role)}
           onChange={onRoleChanged}
-          className="h-4 w-4 border-gray-300 rounded"
+          className="h-4 w-4 border-gray-300 rounded bg-white"
         />
-        <label htmlFor={role} className="text-sm text-gray-700 px-4">
+        <label htmlFor={role} className="text-sm text-gray-700 px-2 ">
           {role}
         </label>
       </div>
@@ -112,7 +112,7 @@ const NewUserForm = () => {
         <div>
           <label
             htmlFor="username"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-gra-"
           >
             Username: <span className="text-gray-500">[3-20 letters]</span>
           </label>
@@ -123,7 +123,7 @@ const NewUserForm = () => {
             autoComplete="off"
             value={username}
             onChange={onUsernameChanged}
-            className={`text-gray-500 mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 ${validUserClass}`}
+            className={`text-gray-500 mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white ${validUserClass}`}
           />
         </div>
 
@@ -141,14 +141,14 @@ const NewUserForm = () => {
             type="password"
             value={password}
             onChange={onPasswordChanged}
-            className={`text-gray-500 mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 ${validPwdClass}`}
+            className={`text-gray-500 mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 bg-white focus:ring-indigo-500 ${validPwdClass}`}
           />
         </div>
 
         <div>
           <label
             htmlFor="roles"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-gray-700 "
           >
             ASSIGNED ROLES:
           </label>
@@ -162,3 +162,4 @@ const NewUserForm = () => {
 };
 
 export default NewUserForm;
+
